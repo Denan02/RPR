@@ -1,10 +1,13 @@
 package org.example;
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
-        FiksniBroj f = new FiksniBroj(Grad.ZENICA, "645-053");
-        System.out.println(f.ispisi());
-        MobilniBroj m = new MobilniBroj(61, "242-050");
-        System.out.println(m.ispisi());
+        HashMap<String, String> a = new HashMap<String, String>();
+        a.put("Sarajevo", "Bosna i Hercegovina");
+        a.put("Beograd", "Republika Srbija");
+        a.put("Zagreb","Republika Hrvatska");
+        System.out.println(a.get("Beograd"));
     }
 }

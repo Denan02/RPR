@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class FiksniBroj extends TelefonskiBroj{
     private String broj;
     private Grad gradKantona;
@@ -19,5 +21,10 @@ public class FiksniBroj extends TelefonskiBroj{
         else if(gradKantona == Grad.TUZLA)
             vrati = "036/"+broj;
         return vrati;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(gradKantona, broj);
     }
 }
